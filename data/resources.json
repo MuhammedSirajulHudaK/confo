@@ -1,0 +1,264 @@
+{
+  "title": "DevFest Toulouse 2018",
+  "description": "Le DevFest, ou 'Developers Festival', est une conférence technique destinée aux développeurs. Elle s'adresse aussi bien aux étudiants, aux professionnels ou tout simplement aux curieux technophiles.",
+  "image": "images/social-share.jpg",
+  "keywords": "event, gdg, gde, devfest, google, programming, android, chrome, polymer, developers, web, cloud, androiddev",
+  "dates": "Jeudi 8 Novembre, 2018",
+  "partnershipProposition": "https://bit.ly/dfua17-partners",
+  "share": "Partager",
+  "followOur": "Suivez notre ",
+  "followUs": "Suivez nous sur ",
+  "emailUs": "contact@devfesttoulouse.fr",
+  "partnershipResources": "Partnership Resources",
+  "eventResources": "Event Resources",
+  "buyTicket": "Inscription",
+  "signIn": "Sign in",
+  "signOut": "Sign out",
+  "viewHighlights": "View Highlights",
+  "offlineMessage": "You can still work offline.",
+  "cachingComplete": "Caching complete! Future visits will work offline.",
+  "newVersionAvailable": "A new version of this app is available.",
+  "refresh": "Refresh",
+  "position": "Position",
+  "country": "Country",
+  "time": "Time",
+  "faq": "/data/faq.md",
+  "cod": "/data/cod.md",
+  "footer": {
+    "blog": "Blog"
+  },
+  "mySchedule": {
+    "title": "Mon Planning",
+    "browseSession": "Browse sessions"
+  },
+  "footerRelBlock": [
+    {
+      "title": "A propos",
+      "links": [
+        {
+          "name": "GDG Toulouse",
+          "url": "http://gdgtoulouse.fr/",
+          "newTab": true
+        },
+        {
+          "name": "Google Developers Group",
+          "url": "https://developers.google.com/",
+          "newTab": true
+        },
+        {
+          "name": "Code de conduite",
+          "url": "/cod/",
+          "newTab": false
+        }
+      ]
+    },
+    {
+      "title": "Précédentes éditions",
+      "links": [
+        {
+          "name": "DevFest Toulouse 2017",
+          "url": "https://2017.devfesttoulouse.fr/",
+          "newTab": true
+        },
+        {
+          "name": "DevFest Toulouse 2016",
+          "url": "https://2016.devfesttoulouse.fr/",
+          "newTab": true
+        }
+      ]
+    },
+    {
+      "title": "Devenir partenaire",
+      "links": [
+        {
+          "name": "Proposition de partenariat",
+          "url": "https://docs.google.com/presentation/d/e/2PACX-1vR9oEvhN0eKW6KeMqJzYZt1AtwiO5eyRhWcy6cXfE63vtZzX8U9B8_r2LpO6WIwDWjOoLkf10G7tFGO/pub?start=false&loop=true&delayms=0&slide=id.g376bab0a27_1_7",
+          "newTab": true
+        }
+      ]
+    }
+  ],
+  "subscribeNote": "Pas de spam, juste les dernières infos !",
+  "codeOfConduct": "Code of Conduct",
+  "aboutBlock": {
+    "title": "Le DevFest Toulouse, c'est quoi ?",
+    "callToAction": {
+      "featuredSessions": {
+        "description": "Le DevFest, ou 'Developers Festival', est une conférence technique destinée aux développeurs. Elle s'adresse aussi bien aux étudiants, aux professionnels ou tout simplement aux curieux technophiles.",
+        "label": "Explore featured session",
+        "link": "https://www.youtube.com/playlist?list=PLt8lEzcLNl31AouwDkbLbLARlQFwNS2en"
+      },
+      "howItWas": {
+        "description": "Described by many as 'Google I/O of Ukraine', our team creates DevFest to be the best place for experience sharing in a phenomenal atmosphere.",
+        "label": "See how it was in 2016",
+        "youtubeId": "TdpbgRgz6eE"
+      }
+    },
+    "statisticsBlock": {
+      "attendees": {
+        "label": "Participants",
+        "number": "700"
+      },
+      "days": {
+        "label": "Journée",
+        "number": "1"
+      },
+      "sessions": {
+        "label": "Sessions",
+        "number": "36"
+      },
+      "tracks": {
+        "label": "Tracks en parallèle",
+        "number": "4"
+      }
+    }
+  },
+  "ticketsBlock": {
+    "title": "Tickets",
+    "ticketsDetails": "Votre billet vous donne accès à toutes les conférences, aux pauses café, et au repas. L'hébergement n'est PAS inclus dans ce prix.",
+    "soldOut": "Rupture de stock",
+    "notAvailableYet": "Pas encore disponible...",
+    "save": "Économisez ${discount}% !",
+    "shopTitle": "Billetterie",
+    "shopLink": "https://www.billetweb.fr/devfest-toulouse-2018"
+  },
+  "partnersBlock": {
+    "title": "Partenaires",
+    "button": "Devenir partenaire",
+    "link": "https://docs.google.com/presentation/d/e/2PACX-1vR9oEvhN0eKW6KeMqJzYZt1AtwiO5eyRhWcy6cXfE63vtZzX8U9B8_r2LpO6WIwDWjOoLkf10G7tFGO/pub?start=false&loop=true&delayms=0&slide=id.g376bab0a27_1_7",
+    "form": {
+      "title": "Devenir partenaire",
+      "submitLabel": "Envoyer",
+      "fullName": "Nom + Prénom",
+      "companyName": "Nom de votre entreprise"
+    },
+    "toast": "Merci, nous vous contacterons rapidement"
+  },
+  "featuredVideos": {
+    "title": "DFUA'16 featured videos",
+    "callToAction": {
+      "label": "See all videos",
+      "link": "https://www.youtube.com/playlist?list=PLt8lEzcLNl31AouwDkbLbLARlQFwNS2en"
+    }
+  },
+  "blog": {
+    "published": "Publiée le",
+    "suggested": "À voir aussi"
+  },
+  "latestPostsBlock": {
+    "title": "Les dernières nouvelles",
+    "callToAction": {
+      "label": "Voir tous les billets",
+      "link": "/blog/"
+    }
+  },
+  "speakers": {
+    "skills": "Skills",
+    "previousYears": "Years",
+    "previousYear": "Year"
+  },
+  "speakersBlock": {
+    "title": "Rockstar speakers",
+    "callToAction": {
+      "label": "View all speakers",
+      "link": "/speakers/"
+    }
+  },
+  "previousSpeakersBlock": {
+    "title": "Previous speakers",
+    "callToAction": {
+      "label": "View all",
+      "link": "/previous-speakers/"
+    }
+  },
+  "galleryBlock": {
+    "title": "#dfua16 highlights",
+    "description": "This year's festival built lots of excitement. Check out photos from featured talks, hands-on learning sessions, and after-hours fun.",
+    "callToAction": {
+      "label": "See all photos",
+      "link": "https://goo.gl/photos/H8s3CtPexCzkLqSt9"
+    }
+  },
+  "mapBlock": {
+    "title": "Le lieu"
+  },
+  "subscribeBlock": {
+    "callToAction": {
+      "description": "Soyez notifié des dernières informations !",
+      "label": "Souscrire"
+    },
+    "yourEmail": "Votre mail",
+    "emailAddress": "Email Address",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "formTitle": "Recevez les dernières news, info à propos du DevFest Toulouse 2018 !",
+    "emailRequired": "Veuillez entrer une addresse mail valide",
+    "subscribe": "Souscrire",
+    "subscribed": "Souscription effectuée",
+    "close": "Fermer",
+    "generalError": "Une erreur est arrivée 😞... Veuillez réessayer plus tard 🤞",
+    "toast": "Successfully subscribed!"
+  },
+  "team": {
+    "description": "Le DevFest Toulouse est un événement organisé par les communautés de développeurs de Toulouse, et porté administrativement par le GDG Toulouse (ex TAUG).<br><br>Pour rendre tout cela possible, une équipe de bénévoles sur-vitaminée s’active en coulisse."
+  },
+  "schedule": {
+    "saveSessionsSignedOut": "Sign in to save sessions"
+  },
+  "sessionDetails": {
+    "contentLevel": "Niveau",
+    "language": "Langage",
+    "room": "Salle",
+    "type": "Type",
+    "viewPresentation": "Slides",
+    "viewVideo": "Replay",
+    "speakers": "Speakers"
+  },
+  "speakerDetails": {
+    "sessions": "Sessions"
+  },
+  "notifications": {
+    "default": "Enable notifications",
+    "enabled": "We will miss you but you can unsubscribe anytime",
+    "blocked": "We can't send you notifications right now. Please enable notifications in your browser",
+    "subscribe": "Subscribe",
+    "unsubscribe": "Unsubscribe",
+    "enable": {
+      "label": "Enable",
+      "link": "https://pushassist.com/knowledgebase/how-to-enable-or-disable-push-notifications-on-chrome-firefox-safari-b/"
+    },
+    "toast": {
+      "title": "Open"
+    }
+  },
+  "aboutOrganizerBlock": {
+    "image": "/images/team.jpg",
+    "blocks": [
+      {
+        "title": "Organisateurs",
+        "description": "<a href='http://lviv.gdg.org.ua' target='_blank'>GDG Lviv</a> with support of 10 GDGs from all around Ukraine is proud organizer of DevFest Ukraine",
+        "callToAction": {
+          "label": "Ouvrir la page équipe",
+          "link": "/team"
+        }
+      },
+      {
+        "title": "What is GDG?",
+        "description": "Google Developers Group (GDG) - is open and volunteer geek community who create exciting projects and share experience about Google technologies with a passion",
+        "callToAction": {
+          "label": "Read more",
+          "link": "https://developers.google.com/groups/",
+          "newTab": true
+        }
+      }
+    ]
+  },
+  "signInDialog": {
+    "alreadyHaveAccount": "You already have an account",
+    "alreadyUsed": "You've already used",
+    "signInToContinue": {
+      "part1": "Sign in with",
+      "part2": "to continue."
+    }
+  }
+}

@@ -1,0 +1,157 @@
+<script>
+  /* eslint-disable no-unused-vars */
+
+  /* @polymerMixin */
+  const UtilsFunctions = (subclass) => class extends subclass {
+    transformToArray(source, attribute) {
+      return source && Object.keys(source)
+        .map((key) => Object.assign(attribute ? {
+          [attribute]: key,
+        } : {}, source[key]));
+    }
+
+    getDate(date) {
+      return new Date(date).toLocaleString('{$ dateFormat.locale $}', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      });
+    }
+
+    isEmpty(array) {
+      return !array || !array.length;
+    }
+
+    randomOrder(array) {
+      return array.sort(() => 0.5 - Math.random());
+    }
+
+    generateClassName(value) {
+      return value ?
+        value.replace(/\W+/g, '-').replace(/([a-z\d])([A-Z])/g, '$1-$2').toLowerCase() :
+        '';
+    }
+
+    slice(text, number) {
+      return text && text.slice(0, number);
+    }
+
+    isEqual(string1, string2) {
+      return string1 === string2;
+    }
+
+    getVariableColor(value) {
+      if (ShadyCSS) {
+        return ShadyCSS.getComputedStyleValue(this, `--${this.generateClassName(value)}`);
+      }
+      return getComputedStyle(this, `--${this.generateClassName(value)}`);
+    }
+
+    stringNormalize(str) {
+      return (str || '').normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    getSessionTypeClass(session) {
+      return `section-secondary-text type type-${this.stringNormalize(session.type).toLowerCase()}`;
+    }
+
+    getSessionTagStyle(tag) {
+      const color = this.generateClassName(tag + '-text');
+      const bgColor = this.generateClassName(tag);
+      return `color: var(--${color}); background-color: var(--${bgColor})`;
+    }
+
+    getDuration(type) {
+      const tmp = `--${this.stringNormalize(type)}`.replace(' ', '');
+      return getComputedStyle(this).getPropertyValue(tmp);
+    }
+
+    _calendarFile(title, day) {
+      return `${this.stringNormalize(title)}_${day.date}.ics`;
+    }
+
+    _getSessionEvent(date, session) {
+      const {
+        id,
+        title,
+        description,
+        track,
+        mainTag,
+        type,
+        language,
+        complexity,
+        isBreak,
+        startTime,
+        endTime,
+        speakers,
+      } = session;
+
+      const descr = [
+        speakers.map((s) => s.name).join(', '),
+        [type, complexity]
+        .filter((e) => !!e)
+        .map((e) => `[${e}]`)
+        .concat(language === 'English' ? ['🇬🇧'] : [])
+        .join(' '),
+        description,
+      ].join('\n');
+
+      const escape = (str) =>
+        str
+        .replace(/,/g, '\\,')
+        .replace(/\n/g, '\\n');
+
+      const start = `${date.replace(/-/g, '')}T${startTime.replace(':', '')}00`;
+      const end = `${date.replace(/-/g, '')}T${endTime.replace(':', '')}00`;
+
+      return [
+        'BEGIN:VEVENT',
+        `UID:${date}-${startTime}-${id}`,
+        `DTSTAMP:${start}`,
+        `DTSTART:${start}`,
+        `DTEND:${end}`,
+        `SUMMARY:${escape(title)}`,
+        `DESCRIPTION:${escape(descr)}`,
+        `LOCATION:${isBreak ? '' : 'Salle ' + track.title}`,
+        `URL:https://devfesttoulouse.fr/schedule/${date}?sessionId=${id}`,
+        `CATEGORIES:${isBreak?'Break':(mainTag||'')}`,
+        `TRANSP:TRANSPARENT`,
+        'END:VEVENT',
+      ];
+    }
+
+    _getSlotsEvents(day, slot, sessionFilter) {
+      return slot.sessions
+        .filter((session) => !sessionFilter || sessionFilter(session))
+        .reduce((acc, session) =>
+          acc.concat(...session.items.map((item) => this._getSessionEvent(day.date, item))), []);
+    }
+
+    _getDayEvents(day, sessionFilter) {
+      return day.timeslots.reduce((acc, slot) =>
+        acc.concat(this._getSlotsEvents(day, slot, sessionFilter)), []);
+    }
+
+    _ical(schedule, featuredSessions) {
+      const sessionFilter = (session) => {
+        return !featuredSessions || featuredSessions[session.items[0].id];
+      };
+
+      const cal = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Hoverboard/{$ title $}//FR',
+        'X-WR-CALDESC:{$ title $}',
+        'X-WR-CALNAME:{$ title $}',
+        'X-WR-TIMEZONE:Europe/Paris',
+        ...schedule.reduce((acc, day) => acc.concat(this._getDayEvents(day, sessionFilter)), []),
+        'END:VCALENDAR',
+      ];
+      const ical = cal.join('\r\n');
+      return 'data:text/calendar;base64,' + btoa(unescape(encodeURIComponent(ical)));
+    }
+  };
+
+</script>
